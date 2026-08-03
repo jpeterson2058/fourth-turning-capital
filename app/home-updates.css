@@ -1,0 +1,159 @@
+.publication-link {
+  display: block;
+}
+
+.publication-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 7px;
+}
+
+.cover-perspective {
+  background: linear-gradient(160deg, #0b2238 0%, #071624 58%, #102d43 100%);
+}
+
+.cover-perspective::before {
+  background:
+    linear-gradient(145deg, transparent 0 46%, rgba(201, 162, 75, 0.09) 46% 46.4%, transparent 46.4%),
+    radial-gradient(circle at 52% 110%, rgba(95, 73, 32, 0.5), transparent 44%);
+}
+
+.proprietary-boundary {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(201, 162, 75, 0.09), transparent 26%),
+    var(--navy-deep);
+  color: white;
+}
+
+.proprietary-boundary::after {
+  content: "";
+  position: absolute;
+  right: -160px;
+  bottom: -250px;
+  width: 620px;
+  height: 620px;
+  border: 1px solid rgba(201, 162, 75, 0.08);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 70px rgba(201, 162, 75, 0.025),
+    0 0 0 140px rgba(201, 162, 75, 0.018);
+}
+
+.boundary-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: 92px;
+  align-items: start;
+}
+
+.boundary-title h2 {
+  max-width: 620px;
+  margin: 0;
+  color: white;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4vw, 58px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.boundary-title > p:last-child {
+  max-width: 580px;
+  margin: 30px 0 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.74;
+}
+
+.boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(201, 162, 75, 0.48);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.boundary-grid article {
+  min-height: 365px;
+  padding: 34px 30px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.boundary-grid article:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.boundary-grid article > span {
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.boundary-grid h3 {
+  margin: 54px 0 20px;
+  color: white;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.boundary-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.59);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.boundary-private {
+  background: rgba(201, 162, 75, 0.055);
+}
+
+.boundary-private a {
+  margin-top: auto;
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.11);
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .boundary-layout {
+    grid-template-columns: 1fr;
+    gap: 58px;
+  }
+}
+
+@media (max-width: 760px) {
+  .boundary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .boundary-grid article,
+  .boundary-grid article:last-child {
+    min-height: 320px;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .boundary-grid h3 {
+    margin-top: 38px;
+  }
+}
