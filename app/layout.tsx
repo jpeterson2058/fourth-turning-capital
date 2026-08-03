@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import "./home-updates.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fourthturning.capital"),
@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     "Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.",
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
   },
   openGraph: {
     type: "website",
