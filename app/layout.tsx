@@ -44,7 +44,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <script
+          type="module"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"97035d2f728147b39a1e4cc93bce88df"}'
+        />
+      </body>
     </html>
   );
 }
