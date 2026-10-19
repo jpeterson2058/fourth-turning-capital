@@ -64,10 +64,20 @@ const structuredData = {
       image: "https://fourthturning.capital/joshua-peterson.webp",
       url: "https://fourthturning.capital/#about",
       worksFor: { "@id": "https://fourthturning.capital/#organization" },
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Case Western Reserve University",
-      },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "Case Western Reserve University",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          name: "American Military University",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          name: "David N. Myers University",
+        },
+      ],
     },
     {
       "@type": "Person",
@@ -228,7 +238,7 @@ export default function Home() {
                 <div className="leader-copy">
                   <h3>Joshua Peterson</h3>
                   <p className="leader-title">Founder &amp; Principal</p>
-                  <p className="leader-bio">Joshua Peterson is the founder of Fourth Turning Capital, an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal. He brings more than two decades of experience across capital markets, corporate finance, investment analysis, real estate, and business operations. His background includes institutional work in fixed income, derivatives, commercial real estate, banking, and insurance, together with hands-on experience acquiring and operating a small business. He holds an MBA from Case Western Reserve University and is a U.S. Army Reserve veteran.</p>
+                  <p className="leader-bio">Joshua Peterson is the founder of Fourth Turning Capital, an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal. He brings more than two decades of experience across capital markets, corporate finance, investment analysis, real estate, and business operations. His background includes institutional work in fixed income, derivatives, commercial real estate, banking, and insurance, together with hands-on experience acquiring and operating a small business. He holds an MBA from Case Western Reserve University, an MA in International Relations from American Military University, and a BS in Economics from David N. Myers University. He is also a U.S. Army Reserve veteran.</p>
                 </div>
               </article>
               <article className="leader-card">
