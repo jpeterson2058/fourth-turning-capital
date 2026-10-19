@@ -51,6 +51,10 @@ const structuredData = {
       name: "Fourth Turning Capital",
       url: "https://fourthturning.capital/",
       founder: { "@id": "https://fourthturning.capital/#joshua-peterson" },
+      employee: [
+        { "@id": "https://fourthturning.capital/#joshua-peterson" },
+        { "@id": "https://fourthturning.capital/#felicia-rae-peterson" },
+      ],
     },
     {
       "@type": "Person",
@@ -64,6 +68,25 @@ const structuredData = {
         "@type": "CollegeOrUniversity",
         name: "Case Western Reserve University",
       },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fourthturning.capital/#felicia-rae-peterson",
+      name: "Felicia-Rae Peterson",
+      jobTitle: "Managing Director",
+      image: "https://fourthturning.capital/felicia-rae-peterson.webp",
+      url: "https://fourthturning.capital/#about",
+      worksFor: { "@id": "https://fourthturning.capital/#organization" },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "American Military University",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          name: "Colorado State University Pueblo",
+        },
+      ],
     },
   ],
 };
@@ -181,31 +204,45 @@ export default function Home() {
       </section>
 
       <section className="about section" id="about">
-        <div className="wrap about-layout">
-          <figure className="founder-portrait">
-            <div className="founder-image-frame">
-              <img
-                src="/joshua-peterson.webp"
-                alt="Joshua Peterson, Founder and Principal of Fourth Turning Capital"
-                width="1100"
-                height="1650"
-                loading="lazy"
-                decoding="async"
-              />
+        <div className="wrap">
+          <div className="about-intro">
+            <div>
+              <p className="eyebrow"><span />About Fourth Turning Capital</p>
+              <h2>Built for the long arc.</h2>
             </div>
-            <figcaption><strong>Joshua Peterson</strong><span>Founder &amp; Principal</span></figcaption>
-          </figure>
           <div className="about-copy">
-            <p className="eyebrow"><span />About Fourth Turning Capital</p>
-            <h2>Built for the long arc.</h2>
             <p className="about-lede">Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.</p>
             <div className="about-detail"><p>We work across public markets, private businesses, real estate, and strategic operating opportunities—using one consistent framework to compare risk, return, resilience, and purpose.</p><p>Our mandate is intentionally broad. Our discipline is not.</p></div>
             <blockquote>“The greatest wealth is created by building productive assets in advance of renewal.”</blockquote>
-            <div className="founder-profile" aria-labelledby="founder-name">
-              <p className="founder-kicker">Founder</p>
-              <h3 id="founder-name">Joshua Peterson</h3>
-              <p className="founder-title">Founder &amp; Principal</p>
-              <p className="founder-bio">Joshua Peterson is the founder of Fourth Turning Capital, an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal. He brings more than two decades of experience across capital markets, corporate finance, investment analysis, real estate, and business operations. His background includes institutional work in fixed income, derivatives, commercial real estate, banking, and insurance, together with hands-on experience acquiring and operating a small business. He holds an MBA from Case Western Reserve University and is a U.S. Army Reserve veteran.</p>
+          </div>
+          </div>
+          <div className="leadership" aria-labelledby="leadership-heading">
+            <p className="eyebrow" id="leadership-heading"><span />Leadership</p>
+            <div className="leadership-grid">
+              <article className="leader-card">
+                <figure className="leader-portrait">
+                  <div className="leader-image-frame">
+                    <img src="/joshua-peterson.webp" alt="Joshua Peterson, Founder and Principal of Fourth Turning Capital" width="1100" height="1650" loading="lazy" decoding="async" />
+                  </div>
+                </figure>
+                <div className="leader-copy">
+                  <h3>Joshua Peterson</h3>
+                  <p className="leader-title">Founder &amp; Principal</p>
+                  <p className="leader-bio">Joshua Peterson is the founder of Fourth Turning Capital, an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal. He brings more than two decades of experience across capital markets, corporate finance, investment analysis, real estate, and business operations. His background includes institutional work in fixed income, derivatives, commercial real estate, banking, and insurance, together with hands-on experience acquiring and operating a small business. He holds an MBA from Case Western Reserve University and is a U.S. Army Reserve veteran.</p>
+                </div>
+              </article>
+              <article className="leader-card">
+                <figure className="leader-portrait">
+                  <div className="leader-image-frame">
+                    <img src="/felicia-rae-peterson.webp" alt="Felicia-Rae Peterson, Managing Director of Fourth Turning Capital" width="1024" height="1536" loading="lazy" decoding="async" />
+                  </div>
+                </figure>
+                <div className="leader-copy">
+                  <h3>Felicia-Rae Peterson</h3>
+                  <p className="leader-title">Managing Director</p>
+                  <p className="leader-bio">Felicia-Rae Peterson is Managing Director of Fourth Turning Capital, where she leads fundraising, strategic relationships, and marketing. She brings more than 25 years of experience in business development, sales leadership, market expansion, and contract negotiation across real estate development, modular housing, energy, environmental services, and operating businesses. Her career includes leading multi-state sales organizations, developing government and commercial partnerships, and helping bring major real estate projects to sellout before opening. She also brings hands-on entrepreneurial and operating experience as a founder and retail business owner. Felicia-Rae holds a Master of Environmental Policy and Management from American Military University and a B.S. in Biology and Chemistry from Colorado State University Pueblo.</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
