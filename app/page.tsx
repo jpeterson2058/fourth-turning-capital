@@ -42,9 +42,39 @@ function BrandLockup({ compact = false }: { compact?: boolean }) {
 
 function Arrow() { return <span aria-hidden="true" className="arrow">↗</span>; }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fourthturning.capital/#organization",
+      name: "Fourth Turning Capital",
+      url: "https://fourthturning.capital/",
+      founder: { "@id": "https://fourthturning.capital/#joshua-peterson" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fourthturning.capital/#joshua-peterson",
+      name: "Joshua Peterson",
+      jobTitle: "Founder & Principal",
+      image: "https://fourthturning.capital/joshua-peterson.webp",
+      url: "https://fourthturning.capital/#about",
+      worksFor: { "@id": "https://fourthturning.capital/#organization" },
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Case Western Reserve University",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main id="top">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header className="site-header">
         <div className="header-inner">
           <BrandLockup compact />
@@ -152,8 +182,32 @@ export default function Home() {
 
       <section className="about section" id="about">
         <div className="wrap about-layout">
-          <div className="about-mark" aria-hidden="true"><PillarMark /></div>
-          <div className="about-copy"><p className="eyebrow"><span />About Fourth Turning Capital</p><h2>Built for the long arc.</h2><p className="about-lede">Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.</p><div className="about-detail"><p>We work across public markets, private businesses, real estate, and strategic operating opportunities—using one consistent framework to compare risk, return, resilience, and purpose.</p><p>Our mandate is intentionally broad. Our discipline is not.</p></div><blockquote>“The greatest wealth is created by building productive assets in advance of renewal.”</blockquote></div>
+          <figure className="founder-portrait">
+            <div className="founder-image-frame">
+              <img
+                src="/joshua-peterson.webp"
+                alt="Joshua Peterson, Founder and Principal of Fourth Turning Capital"
+                width="1100"
+                height="1650"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption><strong>Joshua Peterson</strong><span>Founder &amp; Principal</span></figcaption>
+          </figure>
+          <div className="about-copy">
+            <p className="eyebrow"><span />About Fourth Turning Capital</p>
+            <h2>Built for the long arc.</h2>
+            <p className="about-lede">Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.</p>
+            <div className="about-detail"><p>We work across public markets, private businesses, real estate, and strategic operating opportunities—using one consistent framework to compare risk, return, resilience, and purpose.</p><p>Our mandate is intentionally broad. Our discipline is not.</p></div>
+            <blockquote>“The greatest wealth is created by building productive assets in advance of renewal.”</blockquote>
+            <div className="founder-profile" aria-labelledby="founder-name">
+              <p className="founder-kicker">Founder</p>
+              <h3 id="founder-name">Joshua Peterson</h3>
+              <p className="founder-title">Founder &amp; Principal</p>
+              <p className="founder-bio">Joshua Peterson is the founder of Fourth Turning Capital, an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal. He brings more than two decades of experience across capital markets, corporate finance, investment analysis, real estate, and business operations. His background includes institutional work in fixed income, derivatives, commercial real estate, banking, and insurance, together with hands-on experience acquiring and operating a small business. He holds an MBA from Case Western Reserve University and is a U.S. Army Reserve veteran.</p>
+            </div>
+          </div>
         </div>
       </section>
 
