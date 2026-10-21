@@ -141,7 +141,9 @@ export function articlePath(article: Pick<Article, "collection" | "slug">): stri
   return `/${article.collection}/${article.slug}`;
 }
 
-export function articleCanonicalUrl(article: Pick<Article, "slug">): string {
+export function articleCanonicalUrl(
+  article: Pick<Article, "collection" | "slug">,
+): string {
   return `${SITE_URL}${articlePath(article)}`;
 }
 
