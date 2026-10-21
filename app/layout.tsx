@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
     "Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.",
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
   },
   openGraph: {
     type: "website",
@@ -46,8 +50,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="antialiased">
         {children}
-        <script
-          type="module"
+        <Script
+          id="cloudflare-web-analytics"
+          strategy="afterInteractive"
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon='{"token":"97035d2f728147b39a1e4cc93bce88df"}'
         />

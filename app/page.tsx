@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const principles = [
   { number: "01", title: "Historically informed", copy: "We study recurring cycles of order, disruption, renewal, and capital formation to understand the present with greater clarity." },
   { number: "02", title: "Evidence driven", copy: "Conviction begins with facts. We combine market data, operating fundamentals, and scenario analysis before capital is committed." },
@@ -112,12 +114,12 @@ export default function Home() {
         <div className="header-inner">
           <BrandLockup compact />
           <nav className="desktop-nav" aria-label="Primary navigation">
-            <a href="#philosophy">Philosophy</a><a href="#research">Research</a><a href="#themes">Themes</a><a href="#memorandums">Memorandums</a><a href="#about">About</a><a className="nav-contact" href="#contact">Contact</a>
+            <a href="#philosophy">Philosophy</a><Link href="/insights">Insights</Link><a href="#themes">Themes</a><a href="#memorandums">Memorandums</a><a href="#about">About</a><a className="nav-contact" href="#contact">Contact</a>
           </nav>
           <details className="mobile-menu">
             <summary aria-label="Open navigation"><span /><span /></summary>
             <nav aria-label="Mobile navigation">
-              <a href="#philosophy">Philosophy</a><a href="#research">Research</a><a href="#themes">Themes</a><a href="#memorandums">Memorandums</a><a href="#about">About</a><a href="#contact">Contact</a>
+              <a href="#philosophy">Philosophy</a><Link href="/insights">Insights</Link><a href="#themes">Themes</a><a href="#memorandums">Memorandums</a><a href="#about">About</a><a href="#contact">Contact</a>
             </nav>
           </details>
         </div>
@@ -186,7 +188,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-heading">
             <div><p className="eyebrow"><span />Research &amp; publications</p><h2>We publish,<br /><em>not promote.</em></h2></div>
-            <div className="section-copy"><p>Our publications reflect our philosophy, discipline, and commitment to long-term thinking. We share the research behind our decisions to add useful perspective—not noise—to the conversation.</p><a className="text-link" href="#memorandums">Explore the research library <Arrow /></a></div>
+            <div className="section-copy"><p>Our publications reflect our philosophy, discipline, and commitment to long-term thinking. We share the research behind our decisions to add useful perspective—not noise—to the conversation.</p><Link className="text-link" href="/insights">Explore the research library <Arrow /></Link></div>
           </div>
           <div className="publication-grid">
             {publications.map((publication, index) => (
@@ -266,7 +268,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="wrap footer-main"><BrandLockup /><div className="footer-nav"><a href="#philosophy">Philosophy</a><a href="#research">Research</a><a href="#themes">Themes</a><a href="#about">About</a></div><a className="back-top" href="#top">Back to top ↑</a></div>
+        <div className="wrap footer-main"><BrandLockup /><div className="footer-nav"><a href="#philosophy">Philosophy</a><Link href="/insights">Insights</Link><a href="#themes">Themes</a><a href="#about">About</a></div><a className="back-top" href="#top">Back to top ↑</a></div>
         <div className="wrap footer-bottom"><p>© 2026 Fourth Turning Capital. All rights reserved.</p><p>Research is provided for informational purposes and does not constitute investment advice.</p></div>
       </footer>
     </main>
