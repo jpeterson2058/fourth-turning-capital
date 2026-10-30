@@ -185,12 +185,12 @@ export const articles: readonly Article[] = [
     social: {
       title: "Diplomacy Is Reopening. Constraints Are Not. | FTC Weekly Signal",
       description: "Trilateral diplomacy has a November calendar, but military escalation, modest reserve drainage, and industrial-policy intervention keep the regime constrained.",
-      image: "/ftc-hero-mountains.png",
-      imageAlt: "Mountain landscape representing Fourth Turning Capital's long-term perspective.",
+      image: "/ftc-weekly-signal-2026-10-30.webp",
+      imageAlt: "Layered mountain range at blue hour with warm light breaking across the horizon.",
     },
     hero: {
-      src: "/ftc-hero-mountains.png",
-      alt: "Mountain landscape representing Fourth Turning Capital's long-term perspective.",
+      src: "/ftc-weekly-signal-2026-10-30.webp",
+      alt: "Layered mountain range at blue hour with warm light breaking across the horizon.",
       caption: "The FTC Weekly Signal tracks the forces shaping long-duration capital allocation.",
       source: { label: "Fourth Turning Capital", url: SITE_URL },
     },
