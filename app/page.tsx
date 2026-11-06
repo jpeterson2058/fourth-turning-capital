@@ -226,6 +226,7 @@ export default function Home() {
             <p className="about-lede">Fourth Turning Capital is an independent investment and operating platform focused on productive assets, resilient enterprises, and the infrastructure of national renewal.</p>
             <div className="about-detail"><p>We work across public markets, private businesses, real estate, and strategic operating opportunities—using one consistent framework to compare risk, return, resilience, and purpose.</p><p>Our mandate is intentionally broad. Our discipline is not.</p></div>
             <blockquote>“The greatest wealth is created by building productive assets in advance of renewal.”</blockquote>
+            <Link className="text-link" href="/charter">Read the public FTC Charter <Arrow /></Link>
           </div>
           </div>
           <div className="leadership" aria-labelledby="leadership-heading">
@@ -268,7 +269,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="wrap footer-main"><BrandLockup /><div className="footer-nav"><a href="#philosophy">Philosophy</a><Link href="/insights">Insights</Link><a href="#themes">Themes</a><a href="#about">About</a></div><a className="back-top" href="#top">Back to top ↑</a></div>
+        <div className="wrap footer-main"><BrandLockup /><div className="footer-nav"><a href="#philosophy">Philosophy</a><Link href="/insights">Insights</Link><Link href="/charter">Charter</Link><a href="#themes">Themes</a><a href="#about">About</a></div><a className="back-top" href="#top">Back to top ↑</a></div>
         <div className="wrap footer-bottom"><p>© 2026 Fourth Turning Capital. All rights reserved.</p><p>Research is provided for informational purposes and does not constitute investment advice.</p></div>
       </footer>
     </main>
