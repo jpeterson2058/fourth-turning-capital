@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://fourthturning.capital/charter",
+      lastModified: new Date("2026-11-06"),
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
       url: "https://fourthturning.capital/insights",
       lastModified: new Date("2026-10-21"),
       changeFrequency: "weekly",
